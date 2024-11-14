@@ -1,0 +1,30 @@
+name: MazeHunt
+main: com.pilzbros.mazehunt.MazeHunt
+version: 1.5
+description: MazeHunt adventure game!
+author: Austin Pilz
+website: https://www.spigotmc.org/resources/mazehunt.14863/
+load: POSTWORLD
+softdepend: [Multiverse-Core, Multiworld,ProtocolLib]
+commands:
+  mazehunt:
+    description: MazeHunt user commands
+  mazehuntadmin:
+    description: MazeHunt Admin Commands
+  mh:
+    description: MazeHunt alias
+  mha:
+    description: MazeHunt Admin Commands alias
+permissions:
+  mazehunt.*:
+    description: Gives access to all MazeHunt commands
+    children:
+      mazehunt.admin: true
+      mazehunt.user: true
+    default: op
+  mazehunt.admin:
+    description: Gives admin access to MazeHunt admin commands
+    default: op
+  mazehunt.user:
+    description: User level permissions to play MazeHunt
+    default: true
